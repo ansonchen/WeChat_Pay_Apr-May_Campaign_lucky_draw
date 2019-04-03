@@ -1,0 +1,4 @@
+.test-view-port {
+    /*此处px会被自动转为vmin*/
+    font-size: 20px;
+}
