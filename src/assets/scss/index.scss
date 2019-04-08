@@ -1,4 +1,9 @@
-/*@import "basic.scss";*/
+@import "animation.scss";
+@import "basic.scss";
+
+
+$draw_width:100vw;
+$but_top:0vw;
 
 body,html{
 	height: 100%;
@@ -7,8 +12,19 @@ body,html{
 	z-index: 1;
 
 	text-align: center;
+
+	padding: 0;
+	margin: 0;
+
+	background-color: #fde7d9;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
 }
 
+*{
+	    box-sizing: border-box;
+}
 
 html {
   font-size: 100%;
@@ -17,9 +33,463 @@ html {
 
 
 img {
-  width: auto\9;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic; }
+
+  max-width: none;
+}
+
+
+.shell{
+	width: 100%;
+	min-height: 100%;
+	height: 200%;
+
+	background-image: url(../../../static/images/bgimg.jpg);
+	background-size: $draw_width auto;
+	background-position: 50% -45.1vw;
+	background-repeat: no-repeat;
+
+	overflow: hidden;
+
+	perspective: 500;
+	-webkit-perspective: 500;
+}
+
+
+
+.absolute{
+	position: absolute;
+	left: 0vw;
+	top: 0vw;
+	z-index: 1;
+
+}
+
+.Sands_Resorts_logo{
+	width: 25vw;
+	left: 50vw - (25vw / 2);
+	top: 1vw;
+}
+
+.head_gradient{
+	width: 100vw;
+	height: 16vw;
+	left: 0;
+	top: 0;
+
+	/*background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 14%, rgb(146, 105, 89) 100%);*/
+}
+
+.front_object{
+	width: 107vw;
+	left: -7.1vw;
+	top: 94.5vw;
+}
+
+/*转盘组*/
+
+$plate_top:0vw;
+$plate_outside_width:83vw;
+$plate_inside_w: $plate_outside_width * 0.7;
+
+.plate_outside{
+
+	
+
+	width: $plate_outside_width;
+	left: 50%;
+	top: 43vw + $plate_top;
+	margin-left: 0 - ( $plate_outside_width / 2);
+
+}
+
+.plate_inside{
+	
+	width: $plate_inside_w;
+	left: 50%;
+	top: 55.3vw + $plate_top;
+	margin-left: 0 - ($plate_inside_w /2);
+}
+
+.pendulum{
+	width: $plate_outside_width * 0.55;
+	left: 50vw;
+	top: 39vw  + $plate_top;
+
+	transform: rotateZ(45deg);
+	transform-origin: 0% 50%;
+}
+
+
+
+/*标题组*/
+
+$title_top:5vw;
+
+.game_title{
+	width: 80vw;
+	top: 9vw + $title_top;
+	left: 10vw;
+}
+
+.title{
+	&.gear_L{
+		width: 30vw;
+		top: 5vw + $title_top;
+    	left: 50vw;
+	}
+
+	&.gear_M{
+		width: 12vw;
+		top: 8.2vw + $title_top;
+		left: 51vw;
+	}
+
+	&.gear_S{
+		width: 12vw;
+		top: 36.2vw + $title_top;
+		left: 40vw;
+	}
+
+	&.fish_top_a{
+		width: 32vw;
+		top: 7.2vw + $title_top;
+		left: 64vw;
+	}
+
+	&.fish_top_b{
+		width: 25vw;
+		top: 32.2vw + $title_top;
+		left: 17vw;
+	}
+}
+
+
+/*转轴比例 500*737*/
+.gear_shaft{
+	$gear_shaft_size:18vw;
+
+	width: $gear_shaft_size;
+	height: 16.532vw;
+
+	background-image: url(../../../static/images/gear_shaft.png);
+	background-size: auto 160%;
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+
+	top: 124vw;
+    left: 62.9vw;
+}
+
+
+.gear_shaft_cover{
+	width: $draw_width;
+	left: 22vw;
+    top: 137.7vw;
+
+	/*opacity: .5;*/
+}
+
+
+.plate{
+	&.gear_XL{
+		width: 29vw;
+		left: 57.9vw;
+		top: 108.4vw;
+	}
+
+	&.gear_L{
+		width: 46vw;
+		left: 53vw;
+		top: 35vw;
+	}
+}
+
+
+
+.fish_bottom_1{
+		width: 29vw;
+		top: 145vw;
+		left: 64vw;
+}
+
+.fish_bottom_2{
+	width: 23vw;
+    top: 128vw;
+    left: 27vw;
+}
+
+.offers_list{
+	background-image: linear-gradient(-180deg, rgba(253, 231, 217, 0) 0%, rgba(253, 231, 217, 0.74) 5%, #fde7d9 100%);
+	position: absolute;
+
+	width: 100%;
+	top: 90vh;
+
+	z-index: 2;
+
+	color: #324154;
+
+	h1{
+		font-family:'Times New Roman', Times, serif;
+		font-size: 8vw;
+		color: #324154;
+		letter-spacing: 0;
+		text-align: center;
+		font-weight: bold;
+
+		margin:6vw 0;
+
+		position: relative;
+
+		&:after,&:before{
+			display:block;
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 8vw;
+
+			background-color: #324154;
+			transform: rotateZ(16deg);
+
+			top: -1vw;
+		}
+
+		&:after{
+			left: 8vw;
+		}
+		&:before{
+			right: 8vw;
+		}
+	}
+	
+	ul,li{
+		margin: 0;
+		padding: 0;
+
+		list-style-type: none;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		-webkit-padding-start: 0px;
+
+		overflow: hidden;
+	}
+
+	.tAndC{
+			display: block;
+			margin: 5vw;
+			color: rgba(0, 0, 0, 0.66);
+			text-decoration: underline;
+	}
+
+	.offers{
+
+		text-align: left;
+		box-sizing: content-box;
+		margin: 0 10vw;
+
+		padding: 3vw 0;
+
+		border-bottom: 1px solid  #93773A;
+
+		font-size: 4.5vw;
+		font-weight: bold;
+
+		img{
+			width: 19vw;
+			float: left;
+
+			margin-right: 3vw;
+
+		border: 2px solid #93773A;
+		border-radius: 50%;
+		overflow: hidden;
+		}
+
+		p{
+			margin: 0;
+			margin-top: 6vw;
+
+		}
+
+		p+p{
+			font-size: 3vw;
+		    margin-top: 0vw;
+		}
+
+		
+	}
+
+}
+
+.onload{
+	width: 100%;
+	height: 100%;
+
+	background-color: #DEB5A4;
+	position: absolute;
+
+	z-index: 999;
+
+	left: 0;
+	top: 0;
+
+	.gear_M{
+		width: 6vw;
+		left: 50vw;
+		top: 50vw;
+	}
+	.gear_S{
+		width: 5.2vw;
+		left: 45.5vw;
+		top: 48.8vw;
+	}
+
+	span{
+		left: 41vw;
+		top: 59vw;
+		font-size: 4vw;
+		font-family:'Times New Roman', Times, serif;
+		font-weight: bold;
+
+		color: #324154;
+
+	}
+}
+
+.game_but{
+
+	$button_w:30vw;
+	&.button_img{
+		width: $button_w;
+		left: 50vw - ($button_w / 2);
+		top: 78vw + $but_top;
+
+		transform: rotateZ(0deg);
+	}
+	
+	&.button{
+		width: 16vw;
+		height: 7vw;
+
+		/*background-color: red;*/
+
+		top: 81vw + $but_top;
+		left: 50vw -(16vw /2) ;
+		
+		
+
+		overflow: hidden;
+
+		div{
+			/*border:1px solid #111;*/
+		}
+
+		.money{
+			width: 100%;
+			height: 100%;
+
+
+
+			.money_1{
+				background-image: none;
+				font-family: 'Times New Roman', Times, serif;
+				font-weight: bold;
+				font-size: 7.7vw;
+				line-height: 0.9;
+				color: #324154;
+			}
+			
+
+
+			&>div{
+				width: 25%;
+				height: 100%;
+
+				
+				float: left;
+
+				background-image: url(../../../static/images/money.png);
+				background-size: 110% auto;
+				background-position: 0% 0%;
+			}
+		}
+
+		.status{
+
+			width: 100%;
+			height: 100%;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: bold;
+			font-size: 6.6vw;
+			line-height: 1;
+		}
+	}
+
+	&.pointer{
+		width: 4vw;
+		top: 66vw + $but_top;
+		left: 50vw - (4vw / 2);
+		transform-origin: 50% 63.7%;
+	}
+
+	&.gear_L_a{
+		width: 14vw;
+		left: 46vw;
+		top: 74vw;
+	}
+
+	&.gear_L_b{
+		width: 12vw;
+		left: 41vw;
+		top: 76vw;
+	}
+
+	&.gear_M{
+		width: 9vw;
+		left: 50vw - (9vw /2);
+		top: 84vw
+	}
+
+	&.beard{
+		width: 3vw;
+		top: 70vw;
+		left: 47vw;
+
+		transform: translate3d(0%,0%,0px) rotateZ(0deg) ;
+		transform-origin: 113% 107%;
+
+	}
+
+	&.beard_1{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 0 ) ;
+	}
+	&.beard_2{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 1 ) ;
+	}
+	&.beard_3{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 2 ) ;
+	}
+	&.beard_4{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 3 ) ;
+	}
+	&.beard_5{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 4 ) ;
+	}
+	&.beard_6{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 5 ) ;
+	}
+	&.beard_7{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 6 ) ;
+	}
+	&.beard_8{
+		transform: translate3d(0%,0%,0px) rotateZ(45deg * 7 ) ;
+	}
+
+}
+
+
+
+
+

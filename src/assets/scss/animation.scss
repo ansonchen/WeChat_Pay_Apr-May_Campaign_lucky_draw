@@ -1,0 +1,214 @@
+
+@keyframes rotate {
+	from { transform: rotateZ(0deg); }
+	to { transform: rotateZ(360deg) }
+}
+
+@keyframes rotate- {
+	from { transform: rotateZ(0deg); }
+	to { transform: rotateZ(-360deg) }
+}
+
+.rotateX1{
+	animation-name: rotate;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+.rotateX2{
+	animation-name: rotate;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+.rotateX3{
+	animation-name: rotate;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+.rotateX4{
+	animation-name: rotate;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+.rotateX1-{
+	animation-name: rotate-;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+.rotateX2-{
+	animation-name: rotate-;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+.rotateX3-{
+	animation-name: rotate-;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+.rotateX4-{
+	animation-name: rotate-;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+
+
+@keyframes shake {
+	0%		{ transform: translate3d(0vw, 0vw, 0px); }
+	24%		{ transform: translate3d(1vw, 1vw, 0px); }
+	48%		{ transform: translate3d(0vw, 1vw, 0px); }
+	65%		{ transform: translate3d(1vw, 0vw, 0px); }
+	84%		{ transform: translate3d(0vw, 1vw, 0px); }
+	100%	{ transform: translate3d(0vw,0vw,0px); }
+	
+}
+
+.shake{
+	animation-name: shake;
+	animation-duration: 10s;
+	animation-timing-function: ease-in-out;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+
+
+
+@keyframes gear_shaft {
+	from { background-position: 0% 0%; }
+	to { background-position: 100% 0%; }
+}
+
+.gear_shaft_rotate{
+	animation-name: gear_shaft;
+	animation-duration: .1s;
+	animation-timing-function: steps(7);
+	/*animation-delay: 2s;*/
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+}
+
+
+@keyframes close {
+	from { opacity: 1 }
+	to { opacity: 0;display: none; }
+}
+
+.close{
+	animation-name: close;
+	animation-duration: .5s;
+	animation-timing-function: linear;
+	/*animation-delay: 2s;*/
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+
+	animation-fill-mode: both;
+}
+
+.transition1{
+	transition-property: all;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transition-delay: .1s;
+}
+
+
+@keyframes money_run2 {
+	from { background-position: 0% 200%; }
+	to { background-position: 0% 50%; }
+}
+
+@keyframes money_run3 {
+	from { background-position: 0% 250%; }
+	to { background-position: 0% 0%; }
+}
+
+@keyframes money_run4 {
+	from { background-position: 0% 300%; }
+	to { background-position: 0% 0%; }
+}
+
+.money_2.money_run{
+	animation-name: money_run2;
+	animation-duration: 1s + 2s;
+	animation-timing-function: cubic-bezier(0.18, 0.86, 0.84, 1.03);
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+	animation-fill-mode: both;
+}
+.money_3.money_run{
+	animation-name: money_run3;
+	animation-duration: 1.1s + 2s;
+	animation-timing-function: cubic-bezier(0.18, 0.86, 0.84, 1.03);
+	animation-delay: 0.1s;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+	animation-fill-mode: both;
+}
+
+.money_4.money_run{
+	animation-name: money_run4;
+	animation-duration: 1.1s + 2s;
+	animation-timing-function: cubic-bezier(0.18, 0.86, 0.84, 1.03);
+	animation-delay: 0.2s;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	animation-play-state: running;
+	animation-fill-mode: both;
+}
+
+.transition1s{
+	transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: initial;
+    transition-delay: initial;
+}
+
+
+
+

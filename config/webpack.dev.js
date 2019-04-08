@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const publishPath = "../dist";
 const projectName = "";
-const title = "Mode: Development";
+const title = "锦鲤转盘豪赏套房";
 
 module.exports = merge(common, {
     mode: "development",

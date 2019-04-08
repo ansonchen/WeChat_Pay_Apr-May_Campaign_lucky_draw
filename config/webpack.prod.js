@@ -9,7 +9,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const publishPath = "../dist";
 const projectName = "";
-const title = "Mode: Production";
+const title = "锦鲤转盘豪赏套房";
 
 module.exports = merge(common, {
     mode: "production",
