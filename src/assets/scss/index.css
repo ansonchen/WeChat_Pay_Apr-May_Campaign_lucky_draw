@@ -338,15 +338,178 @@
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
-.transition1s {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: initial;
-          transition-timing-function: initial;
+.transition_1x {
+  -webkit-transform: translate3d(0vw, 0vw, 130px) rotateZ(0deg);
+          transform: translate3d(0vw, 0vw, 130px) rotateZ(0deg); }
+  .game_onload .transition_1x {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-delay: initial;
+            transition-delay: initial; }
+
+.transition_2x {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
   -webkit-transition-delay: initial;
           transition-delay: initial; }
+
+.money, .status {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: cubic-bezier(0.52, -0.16, 0.51, 1.32);
+          transition-timing-function: cubic-bezier(0.52, -0.16, 0.51, 1.32);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s; }
+
+.button_mask {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s; }
+
+.gear_shaft {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.78, 0.02, 1, 1);
+          transition-timing-function: cubic-bezier(0.78, 0.02, 1, 1);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s; }
+
+@-webkit-keyframes pendulum_run {
+  0% {
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg); }
+  20% {
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(125deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(125deg); }
+  100% {
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg); } }
+
+@keyframes pendulum_run {
+  0% {
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg); }
+  20% {
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(125deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(125deg); }
+  100% {
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg); } }
+.pendulum img {
+  -webkit-animation-name: pendulum_run;
+          animation-name: pendulum_run;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: cubic-bezier(0.73, -0.01, 1, 1);
+          animation-timing-function: cubic-bezier(0.73, -0.01, 1, 1);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  /*animation-direction: alternate;*/
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  /*animation-play-state: running;*/
+  /*animation-fill-mode: both;*/ }
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0vw, 0vw, 10px) rotateZ(0deg);
+            transform: translate3d(0vw, 0vw, 10px) rotateZ(0deg); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(0deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(0deg); } }
+
+@keyframes show {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0vw, 0vw, 10px) rotateZ(0deg);
+            transform: translate3d(0vw, 0vw, 10px) rotateZ(0deg); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0vw, 0vw, 0px) rotateZ(0deg);
+            transform: translate3d(0vw, 0vw, 0px) rotateZ(0deg); } }
+.show {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  /*animation-direction: alternate;*/
+  /*animation-play-state: paused;*/
+  /*animation-play-state: running;*/
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+@-webkit-keyframes click {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes click {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+.click {
+  -webkit-animation-name: click;
+          animation-name: click;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  /*animation-direction: alternate;*/
+  /*animation-play-state: paused;*/
+  /*animation-play-state: running;*/
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block; }
@@ -594,11 +757,12 @@ body, html {
   position: fixed;
   z-index: 1;
   text-align: center;
+  overflow: scroll;
   padding: 0;
   margin: 0;
   background-color: #fde7d9;
-  overflow-x: hidden;
-  overflow-y: scroll; }
+  /*		overflow-x: hidden;
+  		overflow-y: scroll;*/ }
 
 * {
   -webkit-box-sizing: border-box;
@@ -609,9 +773,11 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-img {
-  max-width: none; }
+/*img {
 
+  max-width: none;
+}
+*/
 .shell {
   width: 100%;
   min-height: 100%;
@@ -622,12 +788,14 @@ img {
   background-repeat: no-repeat;
   overflow: hidden;
   perspective: 500;
-  -webkit-perspective: 500; }
+  -webkit-perspective: 500;
+  perspective-origin: 50vw 83vw;
+  -webkit-perspective-origin: 50vw 83vw; }
 
 .absolute {
   position: absolute;
-  left: 0vw;
-  top: 0vw;
+  /*	left: 0vw;
+  	top: 0vw;*/
   z-index: 1; }
 
 .Sands_Resorts_logo {
@@ -652,7 +820,9 @@ img {
   width: 83vw;
   left: 50%;
   top: 43vw;
-  margin-left: -41.5vw; }
+  margin-left: -41.5vw;
+  -webkit-transform: translate3d(0vw, 0vw, 130px) rotateZ(-30deg);
+          transform: translate3d(0vw, 0vw, 130px) rotateZ(-30deg); }
 
 .plate_inside {
   width: 58.1vw;
@@ -663,11 +833,12 @@ img {
 .pendulum {
   width: 45.65vw;
   left: 50vw;
-  top: 39vw;
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%; }
+  top: 39vw; }
+  .pendulum img {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%; }
 
 /*标题组*/
 .game_title {
@@ -705,7 +876,9 @@ img {
   background-position: 0% 0%;
   background-repeat: no-repeat;
   top: 124vw;
-  left: 62.9vw; }
+  left: 62.9vw;
+  -webkit-transform: translate3d(0vw, 7vw, 0px);
+          transform: translate3d(0vw, 7vw, 0px); }
 
 .gear_shaft_cover {
   width: 100vw;
@@ -808,7 +981,8 @@ img {
   position: absolute;
   z-index: 999;
   left: 0;
-  top: 0; }
+  top: 0;
+  pointer-events: none; }
   .onload .gear_M {
     width: 6vw;
     left: 50vw;
@@ -829,14 +1003,14 @@ img {
   width: 30vw;
   left: 35vw;
   top: 78vw;
-  -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg); }
+  /*transform: rotateZ(0deg);*/ }
 .game_but.button {
   width: 16vw;
   height: 7vw;
   /*background-color: red;*/
   top: 81vw;
   left: 42vw;
+  pointer-events: none;
   overflow: hidden; }
   .game_but.button div {
     /*border:1px solid #111;*/ }
@@ -858,12 +1032,14 @@ img {
       background-size: 110% auto;
       background-position: 0% 0%; }
   .game_but.button .status {
-    width: 100%;
+    width: 150%;
     height: 100%;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 6.6vw;
-    line-height: 1; }
+    font-size: 5.6vw;
+    line-height: 1.2;
+    margin-left: -25%;
+    color: #324154; }
 .game_but.pointer {
   width: 4vw;
   top: 66vw;
@@ -886,31 +1062,108 @@ img {
   width: 3vw;
   top: 70vw;
   left: 47vw;
-  -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(0deg);
-          transform: translate3d(0%, 0%, 0px) rotateZ(0deg);
   -webkit-transform-origin: 113% 107%;
           transform-origin: 113% 107%; }
-.game_but.beard_1 {
+  .game_but.beard img {
+    -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(0deg);
+            transform: translate3d(0%, 0%, 0px) rotateZ(0deg);
+    -webkit-transform-origin: 113% 107%;
+            transform-origin: 113% 107%; }
+.game_but.beard_1 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(0deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(0deg); }
-.game_but.beard_2 {
+.game_but.beard_2 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(45deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(45deg); }
-.game_but.beard_3 {
+.game_but.beard_3 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(90deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(90deg); }
-.game_but.beard_4 {
+.game_but.beard_4 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(135deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(135deg); }
-.game_but.beard_5 {
+.game_but.beard_5 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(180deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(180deg); }
-.game_but.beard_6 {
+.game_but.beard_6 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(225deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(225deg); }
-.game_but.beard_7 {
+.game_but.beard_7 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(270deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(270deg); }
-.game_but.beard_8 {
+.game_but.beard_8 img {
   -webkit-transform: translate3d(0%, 0%, 0px) rotateZ(315deg);
           transform: translate3d(0%, 0%, 0px) rotateZ(315deg); }
+
+.button_mask {
+  /*display: none;*/
+  width: 100%;
+  height: 134vh;
+  background-image: radial-gradient(100% 50%, rgba(0, 0, 0, 0) 11%, rgba(0, 0, 0, 0.57) 34%, rgba(0, 0, 0, 0.34) 100%);
+  opacity: 0;
+  pointer-events: none; }
+
+.show_prize {
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(139, 112, 101, 0)), color-stop(30%, rgba(23, 21, 21, 0.9)));
+  background-image: linear-gradient(0deg, rgba(139, 112, 101, 0) 0%, rgba(23, 21, 21, 0.9) 30%);
+  display: none; }
+  .show_prize .prize_frame {
+    width: 80vw;
+    height: 60vw;
+    left: 10vw;
+    top: 10vw;
+    background-image: url(../../../static/images/prize_frame.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .show_prize .prize_img {
+    width: 80vw;
+    height: 60vw;
+    left: 10vw;
+    top: 10vw;
+    background-image: url(../../../static/images/prize1.jpg);
+    background-size: 56%;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .show_prize .prize_name {
+    width: 100%;
+    top: 72vw;
+    font-weight: lighter;
+    color: #fff;
+    font-size: 4.6vw;
+    line-height: 1.5; }
+    .show_prize .prize_name span {
+      display: block;
+      font-weight: bold; }
+    .show_prize .prize_name i {
+      display: block;
+      font-size: 60%;
+      font-weight: normal; }
+    .show_prize .prize_name:after, .show_prize .prize_name:before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: #fff;
+      -webkit-transform: rotateZ(16deg);
+              transform: rotateZ(16deg);
+      top: 0vw; }
+    .show_prize .prize_name:after {
+      left: 14vw; }
+    .show_prize .prize_name:before {
+      right: 14vw; }
+  .show_prize button {
+    /*width: 50vw;*/
+    background: #93773A;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 5vw;
+    padding: 1vw 8vw;
+    top: 94vw;
+    margin: 0 auto;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%); }

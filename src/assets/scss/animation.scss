@@ -202,12 +202,107 @@
 	animation-fill-mode: both;
 }
 
-.transition1s{
-	transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: initial;
+.transition_1x{
+    
+	transform: translate3d(0vw,0vw,130px) rotateZ(0deg);
+
+	.game_onload &{
+		transition-property: transform;
+	    transition-duration: 2s;
+	    transition-timing-function: ease-in-out;
+	    transition-delay: initial;
+	}
+    
+
+
+}
+
+.transition_2x{
+	transition-property: transform;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
     transition-delay: initial;
 }
+
+.money,.status{
+	transition-property: transform;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(0.52,-0.16, 0.51, 1.32);
+	transition-delay: 0s;
+}
+
+.button_mask{
+	transition-property: opacity;
+	transition-duration: .2s;
+	transition-timing-function: linear;
+	transition-delay: 0.2s;
+}
+
+
+.gear_shaft{
+	transition-property: transform;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0.78, 0.02, 1, 1);
+	transition-delay: 0s;
+}
+
+
+@keyframes pendulum_run {
+	0% {     transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg); }
+	20% {     transform: translate3d(0vw, 0vw, 0px) rotateZ(125deg); }
+	100% {     transform: translate3d(0vw, 0vw, 0px) rotateZ(45deg); }
+}
+
+.pendulum img{
+	animation-name: pendulum_run;
+	animation-duration: 4s;
+	animation-timing-function: cubic-bezier(0.73, -0.01, 1, 1);
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	animation-play-state: paused;
+	/*animation-play-state: running;*/
+	/*animation-fill-mode: both;*/
+}
+
+
+@keyframes show {
+	from { opacity: 0; transform: translate3d(0vw, 0vw, 10px) rotateZ(0deg)}
+	to { opacity: 1; transform: translate3d(0vw, 0vw, 0px) rotateZ(0deg) }
+}
+
+.show{
+
+	animation-name: show;
+	animation-duration: .8s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	/*animation-play-state: paused;*/
+	/*animation-play-state: running;*/
+	animation-fill-mode: both;
+}
+
+
+@keyframes click {
+	0%   	{ transform: scale(1); }
+	50%		{ transform: scale(1.1);  }
+	100% 	{ transform: scale(1); }
+}
+
+.click{
+	animation-name: click;
+	animation-duration: .2s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	/*animation-play-state: paused;*/
+	/*animation-play-state: running;*/
+	animation-fill-mode: both;
+}
+
 
 
 
