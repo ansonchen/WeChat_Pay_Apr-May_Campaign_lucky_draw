@@ -758,6 +758,7 @@ body, html {
   z-index: 1;
   text-align: center;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 0;
   margin: 0;
   background-color: #fde7d9;
