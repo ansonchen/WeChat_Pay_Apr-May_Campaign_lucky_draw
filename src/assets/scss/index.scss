@@ -19,7 +19,8 @@ body,html{
 	padding: 0;
 	margin: 0;
 
-	background-color: #fde7d9;
+	/*background-color: #fde7d9;*/
+	background-image: linear-gradient(-180deg, #DFB5A5 20%, #FDE8DA 60%);
 
 /*		overflow-x: hidden;
 		overflow-y: scroll;*/
@@ -44,7 +45,7 @@ html {
 .shell{
 	width: 100%;
 	min-height: 100%;
-	height: 200%;
+	height: 365vw;
 
 	background-image: url(../../../static/images/bgimg.jpg);
 	background-size: $draw_width auto;
